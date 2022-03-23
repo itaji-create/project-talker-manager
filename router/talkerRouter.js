@@ -18,7 +18,11 @@ const editTalker = require('../middlewares/editTalker');
 
 const deleteTalker = require('../middlewares/deleteTalker');
 
+const searchTalker = require('../middlewares/searchTalker');
+
 router.get('/', getAllTalkers);
+
+router.get('/search', validToken, searchTalker);
 
 router.get('/:id', getTalkerById);
 
